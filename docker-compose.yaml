@@ -2,7 +2,7 @@ version: "3"
 services:
   dockerui:
     image: hypriot/rpi-dockerui
-      ports:
+    ports:
         - "9000:9000"
   mongo:
     image: nonoroazoro/rpi-mongo
