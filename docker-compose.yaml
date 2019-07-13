@@ -1,0 +1,31 @@
+version: "3"
+services:
+  dockerui:
+    image: hypriot/rpi-dockerui
+      ports:
+        - "9000:9000"
+  mongo:
+    image: nonoroazoro/rpi-mongo
+    ports:
+      - "27017:27017"
+      - "28017:28017"
+  etcd:
+    image: liskl/etcd-armv7l
+  redis:
+    image: hypriot/rpi-redis
+    ports:
+      - "6379:6379"
+  posgres:
+    image: tobi312/rpi-postgresql:9.6
+    ports:
+      - "5432:5432"
+  amqp:
+    image: ronnyroos/rpi-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  keycloak:
+    image: ruifigueiredo/rpi-keycloak
+    ports:
+      - "8180:8080"
+      - "9990:9990"
